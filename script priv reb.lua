@@ -241,7 +241,7 @@ local missionTime = 0
 local resetThreshold = 50  
 
 local questDataOutsideID = {
-    {range = {0, 200000}, options = {"Evil Saiyan", "Kid Nohag"}},
+    {range = {0, 200000}, options = {"X Fighter", "Kid Nohag"}},
     {range = {200001, 850000}, options = {"Mapa", "Radish"}},
     {range = {850001, 4500000}, options = {"Super Vegetable", "Chilly"}},
     {range = {4500001, 25000000}, options = {"Super Vegetable", "SSJB Wukong"}},
