@@ -321,3 +321,17 @@ task.spawn(function()
         wait(1)
     end
 end)
+task.spawn(function()
+    while true do
+        for _, boss in ipairs(game.Workspace.Living:GetChildren()) do
+            if boss.Name == "X Fighter" and boss:FindFirstChild("Humanoid") and boss.Humanoid.Health > 0 then
+                lplr.Character.HumanoidRootPart.CFrame = boss.HumanoidRootPart.CFrame * CFrame.new(0, 0, 4.5)
+                game:GetService("ReplicatedStorage").Package.Events.p:FireServer("Blacknwhite27", 1)
+                game:GetService("ReplicatedStorage").Package.Events.p:FireServer("Blacknwhite27", 2)
+                break
+            end
+        end
+        task.wait(0.1) 
+    end
+end)
+
