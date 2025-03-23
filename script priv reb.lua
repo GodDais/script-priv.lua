@@ -214,22 +214,6 @@ task.spawn(function()
     end
 end)
 
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Package = ReplicatedStorage:WaitForChild("Package")
-local Events = Package:WaitForChild("Events")
-
-local function executeCommands()
-    Events.p:FireServer("Blacknwhite27", 1, false)
-    Events.kb:FireServer(1, false, CFrame.new())
-    Events.def:InvokeServer("Blacknwhite27")
-end
-
-local startTime = tick() 
-while tick() - startTime < 13 do 
-    executeCommands()
-    task.wait(0.1) 
-end
-
 
 task.spawn(function()
     while true do
@@ -257,7 +241,7 @@ local missionTime = 0
 local resetThreshold = 50  
 
 local questDataOutsideID = {
-    {range = {0, 200000}, options = {"Klirin", "Kid Nohag"}},
+    {range = {0, 200000}, options = {"Evil Saiyan", "Kid Nohag"}},
     {range = {200001, 850000}, options = {"Mapa", "Radish"}},
     {range = {850001, 4500000}, options = {"Super Vegetable", "Chilly"}},
     {range = {4500001, 25000000}, options = {"Super Vegetable", "SSJB Wukong"}},
